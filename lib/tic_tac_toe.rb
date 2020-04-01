@@ -23,7 +23,7 @@ end
 
 def move(board, position, token)
   index = position.to_i - 1
-  board[index] = token
+  board[position] = token
 end
 
 def position_taken?(board, index)
