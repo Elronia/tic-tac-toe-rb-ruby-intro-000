@@ -50,7 +50,7 @@ def turn(board)
     else
       turn(board)
    end
-  move(board, position, token)
+#  move(board, position, token)
 end
 
 def turn_count(board)
