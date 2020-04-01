@@ -41,18 +41,31 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip #receiving user's input
-  index = input_to_index(user_input)
+   input = gets.strip
+   index = input_to_index(input)
    if valid_move?(board, index)
-      #token = current_player(board)
-      #move(board, position, token)
-      player_move(board, index, current_player(board))
+      move(board, index)
       display_board(board)
     else
       turn(board)
    end
-#  move(board, position, token)
+  move(board, index)
 end
+
+#def turn(board)
+#  puts "Please enter 1-9:"
+#  user_input = gets.strip #receiving user's input
+#  index = input_to_index(user_input)
+#   if valid_move?(board, index)
+      ##token = current_player(board)
+      ##move(board, position, token)
+      player_move(board, index, current_player(board))
+      display_board(board)
+#    else
+      turn(board)
+#   end
+#  move(board, position, token)
+#end
 
 def turn_count(board)
   # board.count{|token| token == "X" || token == "O"}
