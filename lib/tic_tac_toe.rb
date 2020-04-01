@@ -22,6 +22,7 @@ def display_board(board)
 end
 
 def move(board, position, token)
+  index = position - 1
   board[index] = token
 end
 
