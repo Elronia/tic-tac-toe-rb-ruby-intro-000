@@ -59,10 +59,10 @@ end
 #   if valid_move?(board, index)
       ##token = current_player(board)
       ##move(board, position, token)
-      player_move(board, index, current_player(board))
-      display_board(board)
+#      player_move(board, index, current_player(board))
+#      display_board(board)
 #    else
-      turn(board)
+#      turn(board)
 #   end
 #  move(board, position, token)
 #end
