@@ -39,33 +39,33 @@ def valid_move?(board, index)
  (index).between?(0,8) && !(position_taken?(board, index))
 end
 
-def turn(board)
-  puts "Please enter 1-9:"
-   input = gets.strip
-   index = input_to_index(input)
-   if valid_move?(board, index)
-      move(board, position, token)
-      display_board(board)
-    else
-      turn(board)
-   end
-  move(board, position, token)
-end
-
 #def turn(board)
-#  puts "Please enter 1-9:"   #1. Asking the user for their move by position 1-9.
-#  user_input = gets.strip    #2.  Receiving the user input.
-#  index = input_to_index(user_input) #3.  Convert user input to an index
-#   if valid_move?(board, index) #4.  If the move is valid, make the move and display board.
-      ##token = current_player(board)
-      ##move(board, position, token)
-#      player_move(board, index, current_player(board))
+#  puts "Please enter 1-9:"
+#   input = gets.strip
+#   index = input_to_index(input)
+#   if valid_move?(board, index)
+#      move(board, position, token)
 #      display_board(board)
-#    else         5.  Otherwise (that is, if the move is invalid) ask for a new position until a valid move is received.
+#    else
 #      turn(board)
 #   end
 #  move(board, position, token)
 #end
+
+def turn(board)
+  puts "Please enter 1-9:"   #1. Asking the user for their move by position 1-9.
+  user_input = gets.strip    #2.  Receiving the user input.
+  index = user_input_to_index(user_input) #3.  Convert user input to an index
+   if valid_move?(board, index) #4.  If the move is valid, make the move and display board.
+      token = current_player(board)
+      move(board, position, token)
+#      player_move(board, index, current_player(board))
+      display_board(board)
+    else         #5.  Otherwise (that is, if the move is invalid) ask for a new position until a valid move is received.
+      turn(board)
+   end
+#  move(board, position, token)
+end
 
 def turn_count(board)
   # board.count{|token| token == "X" || token == "O"}
