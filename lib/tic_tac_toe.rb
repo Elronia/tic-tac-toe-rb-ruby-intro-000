@@ -100,3 +100,7 @@ def winner(board)
     return board[won?(board)[0]]
   end
 end
+
+def play(board)
+
+end
