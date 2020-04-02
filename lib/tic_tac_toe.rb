@@ -55,7 +55,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"   #1. Asking the user for their move by position 1-9.
   user_input = gets.strip    #2.  Receiving the user input.
-  index = user_input_to_index(user_input) #3.  Convert user input to an index
+  #index = user_input_to_index(user_input) #3.  Convert user input to an index
    if valid_move?(board, index) #4.  If the move is valid, make the move and display board.
       token = current_player(board)
       move(board, position, token)
