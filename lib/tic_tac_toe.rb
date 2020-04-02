@@ -64,7 +64,7 @@ def turn(board)
     else         #5.  Otherwise (that is, if the move is invalid) ask for a new position until a valid move is received.
       turn(board)
    end
-  move(board, position, token)
+  #move(board, position, token)
 end
 
 def turn_count(board)
